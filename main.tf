@@ -11,10 +11,10 @@ module "vpc" {
   transit_gateway = "${module.transit_gateway.transit_gateway}"
 }
 
-module "ec2" {
-  source         = "./ec2"
-  my_public_key  = "/tmp/id_rsa.pub"
-  instance_type  = "t2.micro"
-  security_group = "${module.vpc.security_group}"
-  subnets        = "${module.vpc.public_subnets}"
-}
+# module "ec2" {
+#   source         = "./ec2"
+#   my_public_key  = "/tmp/id_rsa.pub"
+#   instance_type  = "t2.micro"
+#   security_group = "${module.vpc.security_group}"
+#   subnets        = "${module.vpc.public_subnets}"
+# }
